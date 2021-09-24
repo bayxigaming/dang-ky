@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://apis.google.com/js/platform.js"></script>
+<title>Đăng ký kênh</title>
+<style>
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+}
+.border {
+border: 3px solid #73AD21;
+}
+.hide{
+	width:0px;
+}
+</style>
+</head>
+
+<body>
+<div class="center border">
+	<div id="subs"><p style="color:red; font-size: 30px;">Bạn bỏ ra 3s đăng ký kênh ủng hộ tui và quay lại đây để tải nhé. <br/ >Cám ơn các bạn.</p>
+	<a id="sub" href="https://www.youtube.com/bayxigaming?sub_confirmation=1" target="_blank" onclick="unlock()"><img style="width:200px" src="https://cdn.pixabay.com/photo/2021/01/24/23/20/subscribe-5946825_960_720.png" /></a>
+	</div>
+	<div  class="button" id="link"></div>
+</div>
+<script>
+var link = window.location.href;
+var urlIndex = link.lastIndexOf("url");
+function unlock() {
+ document.getElementById("link").innerHTML ='<p style="color:red; font-size: 30px;">Nhấn link tải xuống</p>'
+ + '<a href="'+link.substring(urlIndex+4, link.length)
+ +'" target="_blank" onclick="unlock()"><img style="width:200px" src="https://tuanvd.com/wp-content/uploads/2017/10/Download.png"/></a>'
+document.getElementById("subs").innerHTML="";
+}
+</script>
+</body>
+</html>

@@ -31,8 +31,8 @@ var link = window.location.href;
 var urlIndex = link.lastIndexOf("url");
 var nameIndex = link.lastIndexOf("name");
 function unlock() {
- document.getElementById("link").innerHTML ='<p style="color:red; font-size: 30px;">Nhấn nút xanh để tải <b>'+link.substring(nameIndex+4, link.lenght)+'</b> xuống</p>'
- + '<a href="'+link.substring(urlIndex+4, nameIndex)
+ document.getElementById("link").innerHTML ='<p style="color:red; font-size: 30px;">Nhấn nút xanh để tải <b>'+link.substring(nameIndex+5, link.lenght)+'</b> xuống</p>'
+ + '<a href="'+link.substring(urlIndex+4, nameIndex-1)
  +'" target="_blank" onclick="unlock()"><img style="width:200px" src="https://tuanvd.com/wp-content/uploads/2017/10/Download.png"/></a>'
 document.getElementById("subs").innerHTML="";
 }
